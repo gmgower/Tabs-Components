@@ -27,7 +27,6 @@ class TabLink {
     this.tabElementProperty.addEventListener('click', (event) => {
       this.select();
     })
-
   };
 
   select() {
@@ -35,6 +34,7 @@ class TabLink {
     // const links;
     const links = document.querySelectorAll('.tabs-link');
     // console.log('tab click')
+
 
     // 10 Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
     // Array.from(links).forEach();
@@ -66,8 +66,10 @@ class TabItem {
     const items = document.querySelectorAll('.tabs-item');
     // console.log(items)
 
+
     // 15 Remove the class "tabs-item-selected" from each element
     items.forEach(item => item.classList.remove('tabs-item-selected'));
+
 
     // 16 Add a class named "tabs-item-selected" to this element
     //this.element;
