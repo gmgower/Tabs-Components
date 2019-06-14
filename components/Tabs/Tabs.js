@@ -24,31 +24,31 @@ class TabLink {
 
 
     // 13 Add a click event listener on this instance, calling the select method on click
-this.tabElementProperty.addEventListener('click', (event) => {
-  this.select()
-})
+    this.tabElementProperty.addEventListener('click', (event) => {
+      this.select();
+    })
 
   };
 
   select() {
     //  9 Get all of the elements with the tabs-link class
     // const links;
-const links = document.querySelectorAll('.tabs-link')
-// console.log('tab click')
+    const links = document.querySelectorAll('.tabs-link');
+    // console.log('tab click')
 
     // 10 Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
     // Array.from(links).forEach();
-Array.from(links).forEach(link => link.classList.remove('tabs-link-selected'))
+    Array.from(links).forEach(link => link.classList.remove('tabs-link-selected'));
 
 
     // 11 Add a class named "tabs-link-selected" to this link
     // this.element;
-this.tabElementProperty.classList.add('tabs-link-selected');
+    this.tabElementProperty.classList.add('tabs-link-selected');
 
 
     // 12 Call the select method on the item associated with this link
-this.tabItem.select()
-    
+    this.tabItem.select()
+
   }
 }
 
@@ -64,11 +64,10 @@ class TabItem {
     // 14 Select all ".tabs-item" elements from the DOM
     // const items;
     const items = document.querySelectorAll('.tabs-item');
-// console.log(items)
+    // console.log(items)
 
     // 15 Remove the class "tabs-item-selected" from each element
-this.element.classList.remove('tabs-item-selected')
-
+    items.forEach(item => item.classList.remove('tabs-item-selected'));
 
     // 16 Add a class named "tabs-item-selected" to this element
     //this.element;
@@ -86,5 +85,5 @@ links = document.querySelectorAll('.tabs-link');
 links.forEach(link => {
   // - 3 In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
   // console.log(link)
-  return new TabLink(link)
+  return new TabLink(link);
 });
