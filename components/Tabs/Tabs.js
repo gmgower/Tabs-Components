@@ -1,21 +1,23 @@
 
 class TabLink {
   constructor(element) {
-    // Assign this.element to the passed in DOM element
+    // 4 Assign this.element to the passed in DOM element
     // this.element;
     this.tabElementProperty = element;
   //  console.log(this.tabElementProperty)
 
 
-  // Get the custom data attribute on the Link
+  //  5 Get the custom data attribute on the Link
     // this.data;
     this.data = this.tabElementProperty.dataset.tab;
     // console.log(this.tabElementProperty.dataset.tab)
+
     
-    
-    // Using the custom data attribute get the associated Item element
+    //  6 Using the custom data attribute get the associated Item element
     // this.itemElement;
-    
+    this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`)
+    // console.log(this.itemElement)
+
     // Using the Item element, create a new instance of the TabItem class
     // this.tabItem;
     
@@ -57,13 +59,13 @@ class TabItem {
 
 //  START HERE: 
 
-// - Select all classes named ".tabs-link" and assign that value to the links variable
+// - 1 Select all classes named ".tabs-link" and assign that value to the links variable
 links = document.querySelectorAll('.tabs-link');
 // console.log(links)
 
-// - With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
+// -  2 With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
 links.forEach(link => {
-// - In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
+// - 3 In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
 // console.log(link)
 return new TabLink(link)  
 });
