@@ -1,18 +1,17 @@
-
 class TabLink {
   constructor(element) {
     // 4 Assign this.element to the passed in DOM element
     // this.element;
     this.tabElementProperty = element;
-  //  console.log(this.tabElementProperty)
+    //  console.log(this.tabElementProperty)
 
 
-  //  5 Get the custom data attribute on the Link
+    //  5 Get the custom data attribute on the Link
     // this.data;
     this.data = this.tabElementProperty.dataset.tab;
     // console.log(this.tabElementProperty.dataset.tab)
 
-    
+
     //  6 Using the custom data attribute get the associated Item element
     // this.itemElement;
     this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`)
@@ -21,7 +20,7 @@ class TabLink {
     //  7 Using the Item element, create a new instance of the TabItem class
     // this.tabItem;
     this.tabItem = new TabItem(this.itemElement);
-    
+
     // Add a click event listener on this instance, calling the select method on click
 
   };
@@ -35,7 +34,7 @@ class TabLink {
 
     // Add a class named "tabs-link-selected" to this link
     // this.element;
-    
+
     // Call the select method on the item associated with this link
 
   }
@@ -46,15 +45,19 @@ class TabItem {
     // 8 Assign this.element to the passed in element
     // this.element;\
     this.element = element;
-    console.log(this.element)
+    // console.log(this.element)
   }
 
   select() {
-    // Select all ".tabs-item" elements from the DOM
+    // 9 Select all ".tabs-item" elements from the DOM
     // const items;
+    const item = document.querySelectorAll('.tabs-item');
+
 
     // Remove the class "tabs-item-selected" from each element
-    
+
+
+
     // Add a class named "tabs-item-selected" to this element
     //this.element;
   }
@@ -68,9 +71,7 @@ links = document.querySelectorAll('.tabs-link');
 
 // -  2 With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
 links.forEach(link => {
-// - 3 In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
-// console.log(link)
-return new TabLink(link)  
+  // - 3 In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
+  // console.log(link)
+  return new TabLink(link)
 });
-
-
