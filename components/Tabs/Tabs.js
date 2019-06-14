@@ -47,7 +47,7 @@ class TabLink {
 
 
     // 12 Call the select method on the item associated with this link
-    this.tabItem.select()
+    this.tabItem.selected()
 
   }
 }
@@ -60,7 +60,7 @@ class TabItem {
     // console.log(this.element)
   }
 
-  select() {
+  selected() {
     // 14 Select all ".tabs-item" elements from the DOM
     // const items;
     const items = document.querySelectorAll('.tabs-item');
