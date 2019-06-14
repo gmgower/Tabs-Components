@@ -3,8 +3,11 @@ class TabLink {
   constructor(element) {
     // Assign this.element to the passed in DOM element
     // this.element;
-    
-    // Get the custom data attribute on the Link
+    this.tabElementProperty = element;
+  //  console.log(this.tabElementProperty)
+
+
+  // Get the custom data attribute on the Link
     // this.data;
     
     // Using the custom data attribute get the associated Item element
