@@ -64,14 +64,15 @@ class TabItem {
     // 14 Select all ".tabs-item" elements from the DOM
     // const items;
     const items = document.querySelectorAll('.tabs-item');
-
+// console.log(items)
 
     // 15 Remove the class "tabs-item-selected" from each element
-items.classList.remove('tabs-item-selected')
+this.element.classList.remove('tabs-item-selected')
 
 
-    // Add a class named "tabs-item-selected" to this element
+    // 16 Add a class named "tabs-item-selected" to this element
     //this.element;
+    this.element.classList.add('tabs-item-selected');
   }
 }
 
