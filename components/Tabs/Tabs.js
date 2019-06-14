@@ -9,6 +9,9 @@ class TabLink {
 
   // Get the custom data attribute on the Link
     // this.data;
+    this.data = this.tabElementProperty.dataset.tab;
+    // console.log(this.tabElementProperty.dataset.tab)
+    
     
     // Using the custom data attribute get the associated Item element
     // this.itemElement;
