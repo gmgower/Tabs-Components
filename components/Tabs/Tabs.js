@@ -43,9 +43,8 @@ Array.from(links).forEach(link => link.classList.remove('tabs-link-selected'))
 this.tabElementProperty.classList.add('tabs-link-selected');
 
 
-    // Call the select method on the item associated with this link
-
-
+    // 12 Call the select method on the item associated with this link
+this.tabItem.select()
     
   }
 }
