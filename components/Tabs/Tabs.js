@@ -43,8 +43,10 @@ class TabLink {
 
 class TabItem {
   constructor(element) {
-    // Assign this.element to the passed in element
-    // this.element;
+    // 8 Assign this.element to the passed in element
+    // this.element;\
+    this.element = element;
+    console.log(this.element)
   }
 
   select() {
