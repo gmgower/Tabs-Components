@@ -55,11 +55,11 @@ class TabItem {
 links = document.querySelectorAll('.tabs-link');
 // console.log(links)
 
-
 // - With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
 links.forEach(link => {
 // - In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
 // console.log(link)
 return new TabLink(link)  
 });
+
 
